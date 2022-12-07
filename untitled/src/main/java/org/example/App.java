@@ -15,7 +15,7 @@ public class App {
         try {
             session.beginTransaction();
 
-            /*            Person person1 = new Person("test1", 10);
+            Person person1 = new Person("test1", 10);
             Person person2 = new Person("test2", 20);
             Person person3 = new Person("test3", 30);
             Person person4 = new Person("test4", 40);
@@ -23,18 +23,9 @@ public class App {
             session.save(person1);
             session.save(person2);
             session.save(person3);
-            session.save(person4);*/
-
-/*            Person person = session.get(Person.class, 2);
-//            person.setName("new name");
-            session.delete(person);*/
-
-            Person person = new Person("Some name", 60);
-            session.save(person);
+            session.save(person4);
 
             session.getTransaction().commit();
-
-            System.out.println(person.getId());
 
         } finally {
             sessionFactory.close();
